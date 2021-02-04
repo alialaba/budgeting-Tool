@@ -5,33 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budgeting Tool</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 
 <body>
-    <div>
+    <div class="container">
         <h1>Budget Calculator</h1>
         <h2>How much 💸 is in the fund?</h2>
         <input type="number" placeholder="Your Fund" id="fund">
-        <h2>How much 💸 is the item?</h1>
-            <input type="number" placeholder="Item Cost" id="itemPrice">
-            <button>Give it to me straight!</button>
-            <p id="output"></p>
+        <h2>How much 💸 is the item?</h2>
+        <input type="number" placeholder="Item Cost" id="itemPrice">
+        <button>Give it to me straight!</button>
+        <p id="output"></p>
     </div>
-    <script>
-        let btn = document.querySelector("button");
-        let costPrice = document.getElementById('itemPrice');
-        let fundSaved = document.getElementById("fund");
-        let displayOutput = document.getElementById("output");
-        btn.addEventListener("click", () => {
-            let funding = parseFloat(fundSaved.value);
-            let cp = parseFloat(costPrice.value);
-            if (funding > 0 && cp > 0) {
-                funding >= cp ? displayOutput.textContent = "you can get some item" :
-                    displayOutput.textContent = "keep funding you will be fine"
-
-            }
-        })
-    </script>
+    <script src="./script/index.js"></script>
 </body>
 
 </html>
